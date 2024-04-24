@@ -30,15 +30,12 @@ app.post('/api/shorturl/', function(req, res) {
   let http = url.indexOf('http')
   let dot = url.indexOf('.')
   let data = JSON.parse(file.readFileSync('./fakeDB.json','utf8'))
-  console.log(data)
   if(http !== 0){
     res.json(er)
-    console.log('check 1')
     return
   }
   if(dot === -1){
     res.json(er)
-    console.log('check 2')
     return
   }
   if(data){
